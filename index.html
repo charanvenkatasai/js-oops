@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>go to console</h1>
+    <script>
+        class father{
+            constructor(surname,name){
+                this.surname = surname,
+                this.name = name  
+            }
+            details(){
+                console.log("ours surname is",this.surname, "& my fathers name is",this.name);
+                
+            }
+        }
+        let pappa = new father("somineni","sankaraiah")
+        pappa.details();
+
+        class elder_son extends father{
+            constructor(surname,bro_name){
+                super(surname)
+                this.bro_name = bro_name
+                
+            }
+          bro_names(){
+            console.log("my elder brothers name is ",this.bro_name,'& surname is',this.surname);
+          }
+        }
+        let broh = new elder_son("somineni","sai")
+        broh.bro_names()
+
+        class younger_son extends father{
+            constructor(surname,younger_son){
+                super(surname)
+                this.younger_son = younger_son
+                
+            }
+          my_name(){
+            console.log("my name is ",this.younger_son,'& surname is',this.surname);
+          }
+        }
+        let me = new younger_son("somineni","charan")
+        me.my_name()
+    </script>
+</body>
+</html>
